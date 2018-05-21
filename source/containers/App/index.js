@@ -1,21 +1,27 @@
 // Core
 import React, { Component } from 'react';
 
+// Instruments
+import avatar from 'theme/assets/lisa';
+
 export default class App extends Component {
     render () {
         return (
-            <h1
-                style = { {
-                    display:         'flex',
-                    justifyContent:  'center',
-                    alignItems:      'center',
-                    height:          '100vh',
-                    backgroundColor: '#090C14',
-                    color:           '#FFF',
-                    fontSize:        30,
-                } }>
-                Привет! Начало здесь.
-            </h1>
+            <>
+                <section>
+                    <img src = { avatar } />
+                    <form>
+                        <textarea placeholder = {`What's on your mind, Lisa?`} />
+                        <input type = 'submit' value = 'Post' />
+                    </form>
+                </section>
+                <section>
+                    <img src = {avatar} />
+                    <a>Lisa Simpson</a>
+                    <time>Todey</time>
+                    <p>Howdy!</p>
+                </section>
+            </>
         );
     }
 }
