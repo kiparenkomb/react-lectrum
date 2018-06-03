@@ -14,7 +14,7 @@ const options = {
     avatar,
     currentUserFirstName: 'Lisa',
     currentUserLastName: 'Simpson',
-}
+};
 
 
 @hot(module)
