@@ -11,15 +11,23 @@ import Post from 'components/Post';
 // Instruments
 import Styles from './styles.m.css';
 
-console.log('Styles', Styles);
-
 export default class Feed extends Component {
     render () {
+        const {
+            avatar,
+            currentUserFirstName,
+            currentUserLastName,
+        } = this.props;
+
+
         return (
             <section className = { Styles.feed }>
-                <StatusBar />
-                <Composer />
-                <Post />
+                <StatusBar { ...this.props } />
+                <Composer 
+                    avatar = { avatar }
+                    currentUserFirstName = { currentUserFirstName }
+                />
+                <Post { ...this.props } />
             </section>
         );
     }
