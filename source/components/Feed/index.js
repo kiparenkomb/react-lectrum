@@ -16,7 +16,6 @@ export default class Feed extends Component {
         const {
             avatar,
             currentUserFirstName,
-            currentUserLastName,
         } = this.props;
 
 
