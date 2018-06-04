@@ -71,7 +71,7 @@ export default class Feed extends Component {
 
         await delay(1200);
 
-        const newPosts = this.state.posts.map(post => {
+        const newPosts = this.state.posts.map((post) => {
             if (post.id === id) {
                 return {
                     ...post,
