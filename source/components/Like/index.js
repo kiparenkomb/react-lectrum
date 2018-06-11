@@ -34,18 +34,18 @@ export default class Like extends Component {
     }
 
     state = {
-        showLikers: false
+        showLikers: false,
     }
 
     _showLikers () {
         this.setState({
-            showLikers: true
+            showLikers: true,
         });
     }
 
     _hideLikers () {
         this.setState({
-            showLikers: false
+            showLikers: false,
         });
     }
 
