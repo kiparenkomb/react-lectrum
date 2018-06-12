@@ -15,31 +15,22 @@ export default class Composer extends Component {
         _createPost: PropTypes.func.isRequired,
     };
 
-    constructor () {
-        super();
-
-        this._updateComment = this._updateComment.bind(this);
-        this._submitComment = this._submitComment.bind(this);
-        this._handleFormSubmite = this._handleFormSubmite.bind(this);
-        this._submitOnEnter = this._submitOnEnter.bind(this);
-    }
-
     state = {
         comment: '',
     };
 
-    _updateComment (event) {
+    _updateComment = (event) => {
         this.setState({
             comment: event.target.value,
         });
     }
 
-    _handleFormSubmite (event) {
+    _handleFormSubmite = (event) => {
         event.preventDefault();
         this._submitComment();
     }
 
-    _submitComment () {
+    _submitComment = () => {
         const { comment } = this.state;
 
         if (!comment) {
@@ -53,7 +44,7 @@ export default class Composer extends Component {
         });
     }
 
-    _submitOnEnter (event) {
+    _submitOnEnter = (event) => {
         const enterKey = event.key === 'Enter';
 
         if (enterKey) {
