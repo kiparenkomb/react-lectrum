@@ -8,6 +8,10 @@ import cx from 'classnames';
 // Instruments
 import Styles from './styles.m.css';
 
+// Components
+import { withProfile } from 'components/HOC/withProfile';
+
+@withProfile
 export default class Like extends Component {
     static propTypes = {
         _likePost: func.isRequired,

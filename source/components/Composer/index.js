@@ -10,7 +10,8 @@ import { withProfile } from 'components/HOC/withProfile';
 // Instruments
 import Styles from './styles.m.css';
 
-class Composer extends Component {
+@withProfile
+export default class Composer extends Component {
     static propTypes = {
         _createPost: PropTypes.func.isRequired,
     };
@@ -73,5 +74,3 @@ class Composer extends Component {
         );
     }
 }
-
-export default withProfile(Composer);
