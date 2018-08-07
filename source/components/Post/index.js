@@ -28,10 +28,19 @@ export default class Post extends Component {
         const { _removePost, id } = this.props;
 
         _removePost(id);
-    }
+    };
 
     render () {
-        const { avatar, currentUserFirstName, currentUserLastName, comment, created, _likePost, id, likes } = this.props;
+        const {
+            avatar,
+            firstName,
+            lastName,
+            comment,
+            created,
+            _likePost,
+            id,
+            likes,
+        } = this.props;
 
         return (
             <section className = { Styles.post }>
@@ -40,7 +49,7 @@ export default class Post extends Component {
                     onClick = { this._removePost }
                 />
                 <img src = { avatar } />
-                <a>{`${currentUserFirstName} ${currentUserLastName}`}</a>
+                <a>{`${firstName} ${lastName}`}</a>
                 <time>{moment.unix(created).format('MMMM D h:mm:ss a')}</time>
                 <p>{comment}</p>
                 <Like
