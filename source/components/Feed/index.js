@@ -13,7 +13,6 @@ import Spinner from 'components/Spinner';
 
 // Instruments
 import Styles from './styles.m.css';
-import { getUniqueID, delay } from 'instruments';
 import { api, TOKEN } from 'config/api';
 
 @withProfile
@@ -25,6 +24,11 @@ export default class Feed extends Component {
 
     componentDidMount () {
         this._fetchPosts();
+        this.refetch = setInterval(this._fetchPosts, 1000);
+    }
+
+    componentWillUnmount () {
+        clearInterval(this.refetch);
     }
 
     _setPostsFetchingState = (state) => {
