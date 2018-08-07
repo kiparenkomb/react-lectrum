@@ -22,7 +22,7 @@ export const generateDevelopmentConfiguration = () =>
                 historyApiFallback: true,
                 host:               '0.0.0.0',
                 overlay:            true,
-                port:               3020,
+                port:               3000,
                 stats:              'errors-only',
                 useLocalIp:         true,
                 headers:            {
