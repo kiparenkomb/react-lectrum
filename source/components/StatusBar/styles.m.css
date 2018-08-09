@@ -1,31 +1,79 @@
 .statusBar {
     display: flex;
+    z-index: 1;
+    top: 0;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 42px;
-    border-bottom: 1px solid var(--paletteColor9);
-    background-color: var(--paletteColor7);
+    border-bottom: var(--paletteColor7);
+    background-color: var(--paletteColor6);
     margin-bottom: 20px;
 
     & button {
         display: flex;
         align-items: center;
-        background-color: var(--paletteColor7);
-        padding: 5px 15px;
-        border: 1px solid var(--paletteColor3);
+        justify-content: center;
+        margin: 0 10px;
+        padding: 2px 10px;
+        background-color: transparent;
+        color: white;
+        font-size: 12px;
+        font-weight: 400;
+        white-space: nowrap;
+        cursor: pointer;
+        border-radius: 4px;
+        outline: none;
+
+        & img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+        }
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    & .status {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        width: 70px;
+        min-width: max-content;
+        height: 24px;
+        background: var(--paletteColor3);
+        left: 5px;
+        color: var(--paletteColor7);
+        border: 1px solid var(--paletteColor7);
         border-radius: 5px;
+        font-size: 14px;
+        user-select: none;
         cursor: pointer;
 
         & span {
-            color: var(--paletteColor2);
-        }
-
-        & img {
-            width: 20px;
-            height: 20px;
-            margin-right: 15px;
+            width: 9px;
+            height: 9px;
             border-radius: 50%;
+        }
+    }
+
+    & .online {
+        & span {
+            background: var(--paletteColor15);
+            box-shadow: 0 0 2px var(--paletteColor15);
+        }
+    }
+
+    & .offline {
+        & span {
+            background: var(--paletteColor14);
+            box-shadow: 0 0 2px var(--paletteColor14);
         }
     }
 }
