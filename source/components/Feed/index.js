@@ -78,7 +78,7 @@ export default class Feed extends Component {
         const response = await fetch(`${api}/${id}`, {
             method:  'PUT',
             headers: {
-                Authorization:  TOKEN,
+                Authorization: TOKEN,
             },
         });
 
@@ -98,7 +98,7 @@ export default class Feed extends Component {
         await fetch(`${api}/${id}`, {
             method:  'DELETE',
             headers: {
-                Authorization:  TOKEN,
+                Authorization: TOKEN,
             },
         });
 
